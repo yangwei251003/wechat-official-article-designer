@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <title>{{TITLE}} · 微信排版预览</title>
+  <style>
+    :root { color-scheme: light; --ink:#222624; --muted:#68706c; --line:#d8ddda; --paper:#f4f2ed; --panel:#ffffff; --accent:#315f58; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100dvh; background:#e9ebe8; color:var(--ink); font-family:Geist,"Segoe UI","Microsoft YaHei",sans-serif; }
+    button { font:inherit; }
+    button:focus-visible { outline:3px solid #8dbbb2; outline-offset:2px; }
+    .app { min-height:100dvh; display:grid; grid-template-columns:minmax(260px,340px) minmax(0,1fr); }
+    .panel { padding:30px 26px; background:#18211f; color:#eef4f1; border-right:1px solid #2d3936; }
+    .eyebrow { margin:0 0 10px; color:#9bb8b1; font-size:12px; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:0; font-size:25px; line-height:1.25; letter-spacing:-.02em; }
+    .summary { margin:16px 0 0; color:#b9c7c3; font-size:13px; line-height:1.7; }
+    .controls { margin-top:28px; border-top:1px solid #34423e; padding-top:22px; display:grid; gap:14px; }
+    .label { display:block; margin-bottom:7px; color:#9fb0ab; font-size:12px; }
+    .segmented { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+    .segmented button,.copy { border:1px solid #4b5d58; border-radius:8px; background:#24312e; color:#eaf1ef; padding:9px 8px; cursor:pointer; transition:background .18s ease,transform .18s ease; }
+    .segmented button:hover,.copy:hover { background:#30413d; }
+    .segmented button:active,.copy:active { transform:scale(.98); }
+    .segmented button[aria-pressed="true"] { background:#d9e9e4; color:#17332d; border-color:#d9e9e4; }
+    .copy { width:100%; margin-top:6px; padding:13px 14px; background:#d9e9e4; color:#17332d; border-color:#d9e9e4; font-weight:700; }
+    .warning { margin-top:18px; padding:12px 13px; border-left:3px solid #d3a35d; background:#2b2a24; color:#e8d8bd; font-size:12px; line-height:1.65; }
+    .warning[data-safe="true"] { border-left-color:#79ad98; background:#213029; color:#c9e2d8; }
+    .status { min-height:22px; margin:12px 0 0; color:#b7c8c3; font-size:12px; line-height:1.5; }
+    .stage { min-width:0; padding:38px 24px 70px; overflow:auto; }
+    .phone { width:390px; max-width:100%; margin:0 auto; background:#fff; border:1px solid #cfd5d1; box-shadow:0 18px 55px rgba(24,33,31,.13); transition:width .2s ease,background .2s ease; }
+    .phone.dark { padding:16px; background:#151817; border-color:#2b302e; }
+    .phone.dark #wechat-content { filter:brightness(.86) contrast(1.08); }
+    #wechat-content { width:100%; overflow:hidden; }
+    @media (max-width:760px) {
+      .app { grid-template-columns:1fr; }
+      .panel { border-right:0; border-bottom:1px solid #2d3936; }
+      .stage { padding:24px 10px 50px; }
+    }
+    @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <aside class="panel" aria-label="预览控制">
+      <p class="eyebrow">WeChat Article Preview</p>
+      <h1>{{TITLE}}</h1>
+      <p class="summary">{{STYLE_SUMMARY}}</p>
+      <div class="controls">
+        <div>
+          <span class="label">手机宽度</span>
+          <div class="segmented" role="group" aria-label="手机宽度">
+            <button type="button" data-width="375" aria-pressed="false">375</button>
+            <button type="button" data-width="390" aria-pressed="true">390</button>
+            <button type="button" data-width="430" aria-pressed="false">430</button>
+          </div>
+        </div>
+        <div>
+          <span class="label">阅读模式</span>
+          <div class="segmented" role="group" aria-label="阅读模式">
+            <button type="button" data-mode="light" aria-pressed="true">浅色</button>
+            <button type="button" data-mode="dark" aria-pressed="false">深色</button>
+            <button type="button" data-mode="system" aria-pressed="false">系统</button>
+          </div>
+        </div>
+        <button class="copy" id="copy-button" type="button">复制富文本到公众号</button>
+      </div>
+      <div class="warning" id="asset-warning">{{ASSET_WARNING}}</div>
+      <p class="status" id="copy-status" aria-live="polite"></p>
+    </aside>
+    <section class="stage" aria-label="文章预览">
+      <article class="phone" id="phone-frame">
+        <div id="wechat-content">{{ARTICLE_HTML}}</div>
+      </article>
+    </section>
+  </main>
+  <script>
+    const content = document.getElementById('wechat-content');
+    const frame = document.getElementById('phone-frame');
+    const status = document.getElementById('copy-status');
+    const warning = document.getElementById('asset-warning');
+    const widthButtons = [...document.querySelectorAll('[data-width]')];
+    const modeButtons = [...document.querySelectorAll('[data-mode]')];
+
+    const riskyImages = [...content.querySelectorAll('img')].filter((img) => {
+      const src = img.getAttribute('src') || '';
+      return !/^https:\/\/(mmbiz\.qpic\.cn|mmbiz\.qlogo\.cn)\//i.test(src);
+    });
+    warning.dataset.safe = riskyImages.length === 0 ? 'true' : 'false';
+
+    widthButtons.forEach((button) => button.addEventListener('click', () => {
+      frame.style.width = `${button.dataset.width}px`;
+      widthButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+    }));
+
+    function applyMode(mode) {
+      const dark = mode === 'dark' || (mode === 'system' && matchMedia('(prefers-color-scheme:dark)').matches);
+      frame.classList.toggle('dark', dark);
+      modeButtons.forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.mode === mode)));
+    }
+    modeButtons.forEach((button) => button.addEventListener('click', () => applyMode(button.dataset.mode)));
+
+    async function copyRichText() {
+      const html = content.innerHTML;
+      const plain = content.innerText;
+      try {
+        if (window.ClipboardItem && navigator.clipboard?.write) {
+          await navigator.clipboard.write([new ClipboardItem({
+            'text/html': new Blob([html], { type:'text/html' }),
+            'text/plain': new Blob([plain], { type:'text/plain' })
+          })]);
+        } else {
+          const range = document.createRange();
+          range.selectNodeContents(content);
+          const selection = getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          if (!document.execCommand('copy')) throw new Error('浏览器拒绝复制');
+          selection.removeAllRanges();
+        }
+        status.textContent = riskyImages.length ? `正文已复制；${riskyImages.length} 张图片仍需确认微信转存。` : '正文和微信图片已复制。';
+      } catch (error) {
+        status.textContent = `自动复制失败：${error.message}。请手动全选右侧文章复制。`;
+      }
+    }
+    document.getElementById('copy-button').addEventListener('click', copyRichText);
+  </script>
+</body>
+</html>

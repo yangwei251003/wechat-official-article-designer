@@ -1,0 +1,32 @@
+{
+  "synthetic": true,
+  "original_photos_articles_course_rows_read": false,
+  "complete_contact_sheet_program_exit_code": 0,
+  "generated_input_images": 12,
+  "contact_sheets": 4,
+  "csv_record_counts": [
+    12,
+    15
+  ],
+  "exact_duplicate_phash_dhash_equal": true,
+  "blur_score_decreases_after_blur": true,
+  "synthetic_input_exif_empty": true,
+  "center_crop_dimensions": [
+    400,
+    400
+  ],
+  "processed_dimensions": [
+    600,
+    400
+  ],
+  "procedural_bloom_frame": [
+    900,
+    500
+  ],
+  "html_escape_test": true,
+  "actual_fragment_helper_functions": 7,
+  "json_helpers_round_trip": true,
+  "input_files_unchanged": 12,
+  "WeChat_service_or_draft_submission_tested": false,
+  "full_original_business_pipeline_tested": false
+}

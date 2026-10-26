@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "presets": [
+    {"id":"clarity","name":"信息清晰型","layout":"linear","components":["section-heading","callout","checklist"],"image_strategy":"diagram-first"},
+    {"id":"brand","name":"品牌专业型","layout":"modular","components":["brand-hero","data-card","quote-panel"],"image_strategy":"brand-and-evidence"},
+    {"id":"visual","name":"视觉传播型","layout":"editorial","components":["visual-hero","story-card","image-caption"],"image_strategy":"single-visual-motif"}
+  ]
+}

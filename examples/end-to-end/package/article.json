@@ -1,0 +1,409 @@
+{
+  "schema_version": "2.0",
+  "document_id": "ff720dc0588ed0de",
+  "metadata": {
+    "title": "别急着问用户喜欢什么：小团队的三次信号捕捉",
+    "author": "",
+    "language": "zh-CN",
+    "created_at": "2026-07-24T22:04:03+08:00",
+    "summary": "小团队不需要一份厚重的研究报告，而需要把危险假设、真实行为和小实验接成一个可行动的信号循环。"
+  },
+  "goals": {
+    "objective": "帮助小团队把用户研究从观点争论变成可观察、可验证的产品动作",
+    "audience": "没有专职研究员的产品、设计和创业团队",
+    "call_to_action": "把最近一个争议判断改写成可被推翻的假设",
+    "fact_risk": "low"
+  },
+  "content": {
+    "title_candidates": [
+      "别急着问用户喜欢什么：小团队的三次信号捕捉"
+    ],
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-1",
+            "type": "text",
+            "text": "一个典型的周一：团队盯着新功能的表现，每个人都有解释：入口不明显、文案不够清楚、用户根本不需要。观点越多，决定反而越慢。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-2",
+            "type": "text",
+            "text": "问题不是缺观点，而是缺少能推翻观点的信号。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-3",
+            "type": "text",
+            "text": "用户研究不等于把用户请进会议室投票。对小团队更有用的做法，是把风险最大的判断，变成一次可以观察、可以比较、可以继续行动的循环。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-2",
+        "title": "01 先写下最危险的假设",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-4",
+            "type": "text",
+            "text": "不要从“用户喜欢什么”开始。喜欢是一种态度，很难直接指导下一步；先写出一个能够被行为推翻的判断。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-5",
+            "type": "text",
+            "text": "例如：新用户没有完成首次任务，是因为他在首页没有识别到入口。这个假设可能是错的，但它告诉团队应该观察哪里。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-6",
+            "type": "text",
+            "text": "可以用四个空格把问题写具体：谁，在完成什么任务时，遇到了什么阻力，我们预计会看到什么行为。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-7",
+            "type": "text",
+            "text": "如果一次研究只能证明团队是对的，那不是研究，只是在确认偏好。",
+            "component": "quote",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-3",
+        "title": "02 观察任务，不急着解释",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-8",
+            "type": "text",
+            "text": "邀请目标用户完成同一个真实任务。只交代任务背景，不讲解界面；把解释暂时放到一边，先记录发生了什么。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-9",
+            "type": "text",
+            "text": "他先看到了什么",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-10",
+            "type": "text",
+            "text": "他实际做了什么",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-11",
+            "type": "text",
+            "text": "他在哪里停顿或返回",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-12",
+            "type": "text",
+            "text": "他用什么原话描述困惑",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-13",
+            "type": "text",
+            "text": "评价可以听，行为更值得追。一个人说“挺清楚”，却连续返回两次，这个矛盾本身就是信号。先保留原始措辞和动作，再判断它是偶然现象，还是值得继续验证的模式。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-4",
+        "title": "03 用一个小实验把信号接回产品",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-14",
+            "type": "text",
+            "text": "把重复出现的阻力翻译成一个可逆的小改动。一次只改变关键变量，并提前写下判断信号：如果我们的解释成立，用户的哪个行为会发生变化？",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-15",
+            "type": "text",
+            "text": "改动前，团队争论“入口是否明显”；改动后，团队比较“用户是否更快开始任务、是否减少返回寻找”。研究因此不再停在报告里，而是回到下一次产品决定。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-16",
+            "type": "text",
+            "text": "一次小实验不能证明所有结论。它的价值，是帮助团队知道该继续投入、换一个解释，还是停止追逐错误方向。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-5",
+        "title": "今晚就能开始的最小动作",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-17",
+            "type": "text",
+            "text": "找出最近一个争议最大的产品判断，把它改写成可被推翻的假设；观察同一个任务；保留原始行为；最后只选择一个可逆改动。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-18",
+            "type": "text",
+            "text": "用户研究的价值，不在报告有多厚，而在于让下一次决定离真实用户近一点。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "design": {
+    "direction": "视觉传播型：在噪声中捕捉用户信号",
+    "mode": "high-design",
+    "design_read": {
+      "article_type": "方法型产品文章",
+      "audience": "需要快速做决策的小团队",
+      "action": "立刻写出一个可被行为推翻的假设",
+      "emotion": "从观点噪声进入清晰判断",
+      "visual_family": "编辑部研究海报与信号扫描仪",
+      "wechat_constraint": "仅使用内联CSS、表格分栏、静态图与单个GIF降级"
+    },
+    "controls": {
+      "design_variance": 8,
+      "motion_intensity": 4,
+      "visual_density": 5
+    },
+    "visual_concept": "一条代表真实行为的荧光信号穿过观点噪声，最终被珊瑚色观察镜捕捉",
+    "rhythm_families": [
+      "poster-hero",
+      "editorial-spread",
+      "signal-quote",
+      "field-log",
+      "experiment-strip",
+      "closing-poster"
+    ],
+    "quality_gates": {
+      "content_self_check": "passed",
+      "visual_preflight": "passed",
+      "legacy_reference_check": "passed",
+      "wechat_static_fallback": "passed"
+    },
+    "tokens": {
+      "palette": [
+        "#101522",
+        "#FF5B45",
+        "#C8FF4A"
+      ],
+      "font_stack": "-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif",
+      "body_size": "16px",
+      "line_height": 1.82,
+      "spacing": "editorial-contrast",
+      "radius": "0px"
+    },
+    "components": [
+      "poster-hero",
+      "signal-line",
+      "hypothesis-formula",
+      "observation-log",
+      "before-after-strip",
+      "closing-poster"
+    ]
+  },
+  "assets": [
+    {"id": "hero-wechat", "role": "hero", "local_path": "assets/hero-wechat.png", "provider": "original", "license": "Original asset", "wechat_ready": true},
+    {"id": "cover-wechat", "role": "cover", "local_path": "assets/cover-wechat.png", "provider": "original", "license": "Original asset", "wechat_ready": true},
+    {"id": "motion-wechat", "role": "ornament", "local_path": "assets/motion-wechat.gif", "provider": "original", "license": "Original asset", "wechat_ready": true, "fallback": "assets/motion-poster.png"},
+    {"id": "texture-wechat", "role": "texture", "local_path": "assets/texture-wechat.png", "provider": "original", "license": "Original asset", "wechat_ready": true}
+  ],
+  "locks": {
+    "document": false,
+    "title": false,
+    "node_ids": [],
+    "data_paths": [],
+    "asset_ids": []
+  },
+  "history": [
+    {
+      "version": "1",
+      "timestamp": "2026-07-24T22:04:03+08:00",
+      "actor": "script",
+      "changes": [
+        "scaffolded from source"
+      ]
+    }
+  ],
+  "wechat": {
+    "compatibility_level": "strict",
+    "cover_asset_id": "cover-wechat",
+    "fallbacks": [
+      {"asset_id": "motion-wechat", "type": "image", "src": "assets/motion-poster.png", "reason": "GIF不动或体积受限时使用首帧海报"}
+    ]
+  },
+  "copyright": {
+    "status": "clear",
+    "manual_review_asset_ids": []
+  }
+}

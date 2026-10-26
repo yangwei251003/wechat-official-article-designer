@@ -1,0 +1,203 @@
+{
+  "schema_version": "2.0",
+  "document_id": "2e4c92bf6e618071",
+  "metadata": {
+    "title": "一起整理一次读书分享",
+    "author": "Open-source demo",
+    "language": "zh-CN",
+    "created_at": "2026-10-26T20:21:58+08:00",
+    "summary": ""
+  },
+  "goals": {
+    "objective": "清晰、准确地完成微信公众号内容与视觉交付",
+    "audience": "待确认",
+    "call_to_action": "",
+    "fact_risk": "low"
+  },
+  "content": {
+    "title_candidates": [
+      "一起整理一次读书分享"
+    ],
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-1",
+            "type": "text",
+            "text": "这是一篇完全虚构、为开源演示编写的示例文章，不对应真实组织、活动或经营数据。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-2",
+        "title": "从一个问题开始",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-2",
+            "type": "text",
+            "text": "选一本大家愿意讨论的书，把报名、阅读和交流安排成容易参与的三个步骤。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-3",
+            "type": "text",
+            "text": "先用一句话说明讨论主题。",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-4",
+            "type": "text",
+            "text": "再准备一个大家都能回答的问题。",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-5",
+            "type": "text",
+            "text": "最后记录新的想法，留给下次交流。",
+            "component": "list",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          },
+          {
+            "id": "node-6",
+            "type": "text",
+            "text": "好的讨论，让每个人都有表达与倾听的空间。",
+            "component": "quote",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "section-3",
+        "title": "留下可复用的方法",
+        "locked": false,
+        "source": {
+          "kind": "user",
+          "source_refs": [
+            "source.md"
+          ]
+        },
+        "nodes": [
+          {
+            "id": "node-7",
+            "type": "text",
+            "text": "把本次提问方式和交流顺序保存为模板。下次可以从真实反馈开始调整，而不是重新准备一套复杂流程。",
+            "component": "paragraph",
+            "locked": false,
+            "provenance": {
+              "kind": "user",
+              "source_refs": [
+                "source.md"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "design": {
+    "direction": "轻量清楚的行动手册",
+    "tokens": {
+      "palette": [
+        "#304B5B",
+        "#D17A52",
+        "#EEF3F4"
+      ],
+      "font_stack": "-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif",
+      "body_size": "15px",
+      "line_height": 1.8,
+      "spacing": "comfortable",
+      "radius": "8px"
+    },
+    "components": [
+      "章节标题",
+      "正文",
+      "引用",
+      "编号清单"
+    ],
+    "mode": "baseline"
+  },
+  "assets": [],
+  "locks": {
+    "document": false,
+    "title": false,
+    "node_ids": [],
+    "data_paths": [],
+    "asset_ids": []
+  },
+  "history": [
+    {
+      "version": "1",
+      "timestamp": "2026-10-26T20:21:58+08:00",
+      "actor": "script",
+      "changes": [
+        "scaffolded from source"
+      ]
+    }
+  ],
+  "wechat": {
+    "compatibility_level": "strict",
+    "cover_asset_id": "",
+    "fallbacks": []
+  },
+  "copyright": {
+    "status": "clear",
+    "manual_review_asset_ids": []
+  }
+}

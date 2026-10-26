@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信公众号 AI 内容与视觉设计"
+  short_description: "原创策划、艺术指导、素材生成与微信兼容的完整推文包"
+  default_prompt: "使用 $wechat-official-article-designer 将这些资料制作成内容扎实、视觉有冲击力、素材原创或版权清晰、可在微信预览和导入的完整公众号文章包；不要参考仓库旧图。"

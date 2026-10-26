@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信公众号全链路视觉排版"
+  short_description: "将文章生成微信兼容排版、配套视觉素材并安全写入草稿箱"
+  default_prompt: "使用 $wechat-official-article-designer 将这篇文章设计成可复制并可写入微信公众号草稿箱的完整成品。"

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.wechat-skill/schemas/article-2.0.json",
+  "title": "WeChat Article Intermediate Format",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "document_id", "metadata", "goals", "content", "design", "assets", "locks", "history", "wechat", "copyright"],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "document_id": {"type": "string", "minLength": 1},
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "author", "language", "created_at", "summary"],
+      "properties": {
+        "title": {"type": "string"}, "author": {"type": "string"}, "language": {"type": "string"},
+        "created_at": {"type": "string"}, "summary": {"type": "string"}
+      }
+    },
+    "goals": {
+      "type": "object", "additionalProperties": false,
+      "required": ["objective", "audience", "call_to_action", "fact_risk"],
+      "properties": {"objective": {"type": "string"}, "audience": {"type": "string"}, "call_to_action": {"type": "string"}, "fact_risk": {"enum": ["low", "medium", "high"]}}
+    },
+    "content": {
+      "type": "object", "additionalProperties": false, "required": ["title_candidates", "sections"],
+      "properties": {
+        "title_candidates": {"type": "array", "items": {"type": "string"}},
+        "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}}
+      }
+    },
+    "design": {
+      "type": "object", "additionalProperties": false, "required": ["direction", "tokens", "components"],
+      "properties": {
+        "direction": {"type": "string"}, "components": {"type": "array", "items": {"type": "string"}},
+        "mode": {"enum": ["baseline", "high-design"]},
+        "design_read": {
+          "type": "object", "additionalProperties": false,
+          "required": ["article_type", "audience", "action", "emotion", "visual_family", "wechat_constraint"],
+          "properties": {
+            "article_type": {"type": "string"}, "audience": {"type": "string"}, "action": {"type": "string"},
+            "emotion": {"type": "string"}, "visual_family": {"type": "string"}, "wechat_constraint": {"type": "string"}
+          }
+        },
+        "controls": {
+          "type": "object", "additionalProperties": false,
+          "required": ["design_variance", "motion_intensity", "visual_density"],
+          "properties": {
+            "design_variance": {"type": "integer", "minimum": 1, "maximum": 10},
+            "motion_intensity": {"type": "integer", "minimum": 1, "maximum": 10},
+            "visual_density": {"type": "integer", "minimum": 1, "maximum": 10}
+          }
+        },
+        "visual_concept": {"type": "string"},
+        "rhythm_families": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "quality_gates": {"type": "object"},
+        "tokens": {"type": "object", "required": ["palette", "font_stack", "body_size", "line_height", "spacing", "radius"], "properties": {
+          "palette": {"type": "array", "maxItems": 3, "items": {"type": "string"}}, "font_stack": {"type": "string"},
+          "body_size": {"type": "string"}, "line_height": {"type": "number"}, "spacing": {"type": "string"}, "radius": {"type": "string"}
+        }}
+      }
+    },
+    "assets": {"type": "array", "items": {"type": "object"}},
+    "locks": {
+      "type": "object", "additionalProperties": false, "required": ["document", "title", "node_ids", "data_paths", "asset_ids"],
+      "properties": {"document": {"type": "boolean"}, "title": {"type": "boolean"}, "node_ids": {"type": "array", "items": {"type": "string"}}, "data_paths": {"type": "array", "items": {"type": "string"}}, "asset_ids": {"type": "array", "items": {"type": "string"}}}
+    },
+    "history": {"type": "array", "items": {"type": "object", "required": ["version", "timestamp", "actor", "changes"]}},
+    "wechat": {
+      "type": "object", "additionalProperties": false, "required": ["compatibility_level", "cover_asset_id", "fallbacks"],
+      "properties": {"compatibility_level": {"enum": ["strict", "balanced", "preview-only"]}, "cover_asset_id": {"type": "string"}, "fallbacks": {"type": "array", "items": {"type": "object"}}}
+    },
+    "copyright": {"type": "object", "additionalProperties": false, "required": ["status", "manual_review_asset_ids"], "properties": {"status": {"enum": ["clear", "review", "blocked"]}, "manual_review_asset_ids": {"type": "array", "items": {"type": "string"}}}}
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object", "additionalProperties": false, "required": ["kind", "source_refs"],
+      "properties": {"kind": {"enum": ["user", "user-authorized-edit", "ai", "research", "inference"]}, "source_refs": {"type": "array", "items": {"type": "string"}}}
+    },
+    "node": {
+      "type": "object", "required": ["id", "type", "locked", "provenance"],
+      "properties": {
+        "id": {"type": "string"}, "type": {"enum": ["text", "image", "chart", "component", "video", "table"]},
+        "text": {"type": "string"}, "src": {"type": "string"}, "alt": {"type": "string"}, "engine": {"type": "string"},
+        "spec": {}, "component": {"type": "string"}, "rows": {"type": "array"}, "locked": {"type": "boolean"},
+        "provenance": {"$ref": "#/$defs/provenance"}, "fallback": {"type": "object"}
+      }
+    },
+    "section": {
+      "type": "object", "additionalProperties": false, "required": ["id", "title", "locked", "source", "nodes"],
+      "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "locked": {"type": "boolean"}, "source": {"$ref": "#/$defs/provenance"}, "nodes": {"type": "array", "items": {"$ref": "#/$defs/node"}}}
+    }
+  }
+}

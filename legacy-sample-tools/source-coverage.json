@@ -1,0 +1,108 @@
+{
+  "historical_python_programs": 4,
+  "functions_preserved": 27,
+  "host_adapter_is_optional": true,
+  "SDK_not_distributed": true,
+  "programs": [
+    {
+      "public_path": "legacy-sample-tools/build_photo_contact_sheets.py",
+      "function_names": [
+        "phash",
+        "dhash",
+        "blur_score",
+        "exif_datetime",
+        "sheet_label",
+        "main",
+        "hamming"
+      ],
+      "control_structure_counts": {
+        "FunctionDef": 7,
+        "If": 3,
+        "For": 6,
+        "With": 3
+      },
+      "adaptations": {
+        "absolute_path_parameterized": 3,
+        "explicit_synthetic_io": 2,
+        "business_or_private_literal_replaced": 9,
+        "font_not_bundled_default_font": 2,
+        "csv_paths_relative": 1
+      },
+      "release_sha256": "b28744b4d318d6c8ed2dd0dfc9fb8e2f48cdfb49af90812bbd24a90c4e6cfda3",
+      "original_private_inputs_published": false
+    },
+    {
+      "public_path": "legacy-sample-tools/build_wechat_assets.py",
+      "function_names": [
+        "font",
+        "hex_rgb",
+        "crop_to_ratio",
+        "process_photo",
+        "make_cover",
+        "petal_points",
+        "make_bloom_frame",
+        "make_bloom_assets",
+        "make_brand_strip",
+        "main"
+      ],
+      "control_structure_counts": {
+        "FunctionDef": 10,
+        "If": 3,
+        "With": 4,
+        "For": 6
+      },
+      "adaptations": {
+        "absolute_path_parameterized": 4,
+        "explicit_synthetic_io": 2,
+        "font_not_bundled_default_font": 1,
+        "original_photo_business_records_excluded": 1,
+        "business_or_private_literal_replaced": 32
+      },
+      "release_sha256": "24a91939833297b04963adf4df96b8196a5fc24ea098fc91d67b44b218b619b9",
+      "original_private_inputs_published": false
+    },
+    {
+      "public_path": "legacy-sample-tools/build_wechat_fragment.py",
+      "function_names": [
+        "esc",
+        "image_full",
+        "image_pair",
+        "h2",
+        "h3",
+        "paragraph",
+        "fact_table",
+        "main"
+      ],
+      "control_structure_counts": {
+        "FunctionDef": 8,
+        "If": 18,
+        "For": 3
+      },
+      "adaptations": {
+        "absolute_path_parameterized": 1,
+        "business_or_private_literal_replaced": 105,
+        "core_common_import_portable": 1
+      },
+      "release_sha256": "351b02764028a83b798b391ca306eed9f0551ce66f5191b22dda6644cf30a46a",
+      "original_private_inputs_published": false
+    },
+    {
+      "public_path": "legacy-sample-tools/finalize_wechat_package.py",
+      "function_names": [
+        "read_json",
+        "write_json"
+      ],
+      "control_structure_counts": {
+        "FunctionDef": 2,
+        "For": 4,
+        "If": 5
+      },
+      "adaptations": {
+        "absolute_path_parameterized": 1,
+        "business_or_private_literal_replaced": 66
+      },
+      "release_sha256": "a6c6ffad44f597e1bf23fca0182bbf415a0c227cee38c99f19a04fddc71da293",
+      "original_private_inputs_published": false
+    }
+  ]
+}

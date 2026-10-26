@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "stats": {
+    "source_blocks": 10,
+    "tags": 15,
+    "images": 0,
+    "assets": 0
+  },
+  "wechat_client_final_preview_required": true
+}

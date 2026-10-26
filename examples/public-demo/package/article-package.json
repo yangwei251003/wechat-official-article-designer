@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "title": "一起整理一次读书分享",
+  "slug": "一起整理一次读书分享",
+  "created_at": "2026-10-26T20:21:58+08:00",
+  "source_file": "source.md",
+  "fragment_file": "article-fragment.html",
+  "preview_file": "preview.html",
+  "design": {
+    "mode": "baseline-draft",
+    "track": "教程清单",
+    "concept": "轻量清楚的行动手册",
+    "palette": [
+      "#304B5B",
+      "#D17A52",
+      "#EEF3F4"
+    ],
+    "components": [
+      "章节标题",
+      "正文",
+      "引用",
+      "编号清单"
+    ]
+  },
+  "editing_policy": {
+    "structural_edits_allowed": true,
+    "immutable": [
+      "事实",
+      "观点",
+      "数字",
+      "人名",
+      "引用",
+      "因果",
+      "叙述含义与顺序"
+    ]
+  },
+  "assets": [],
+  "publishing": {
+    "status": "not_started",
+    "cover_asset_id": "cover-main",
+    "author": "Open-source demo",
+    "digest": "",
+    "need_open_comment": 1,
+    "only_fans_can_comment": 0
+  },
+  "article_schema_version": "2.0",
+  "article_file": "article.json"
+}

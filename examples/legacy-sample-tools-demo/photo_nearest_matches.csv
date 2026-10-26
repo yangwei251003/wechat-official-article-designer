@@ -1,0 +1,16 @@
+﻿final_index,final_filename,source_group,source_index,source_filename,phash_distance,dhash_distance
+1,sample-01.jpg,group-3,1,sample-01.jpg,0,0
+1,sample-01.jpg,group-4,1,sample-01.jpg,0,0
+1,sample-01.jpg,group-2,1,sample-01.jpg,0,1
+1,sample-01.jpg,group-2,2,sample-02.jpg,8,13
+1,sample-01.jpg,group-3,2,sample-02.jpg,8,14
+2,sample-02.jpg,group-4,2,sample-02.jpg,0,0
+2,sample-02.jpg,group-2,2,sample-02.jpg,0,2
+2,sample-02.jpg,group-3,2,sample-02.jpg,2,3
+2,sample-02.jpg,group-2,1,sample-01.jpg,8,14
+2,sample-02.jpg,group-3,1,sample-01.jpg,8,15
+3,sample-03.jpg,group-2,3,sample-03.jpg,0,0
+3,sample-03.jpg,group-4,3,sample-03.jpg,0,0
+3,sample-03.jpg,group-3,3,sample-03.jpg,2,0
+3,sample-03.jpg,group-4,2,sample-02.jpg,16,4
+3,sample-03.jpg,group-2,2,sample-02.jpg,16,6

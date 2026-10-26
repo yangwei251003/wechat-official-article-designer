@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "wechat_strict": {
+    "font_stack": "-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif",
+    "font_sizes": {"body":"15px","small":"12px","section":"18px","title":"23px"},
+    "line_heights": {"body":1.8,"title":1.45},
+    "spacing": {"page":"16px","paragraph":"18px","section":"32px"},
+    "radius": {"small":"6px","card":"10px"},
+    "palette_limit": 3,
+    "contrast": {"body":4.5,"large_text":3.0}
+  }
+}

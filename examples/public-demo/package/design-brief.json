@@ -1,0 +1,205 @@
+{
+  "schema_version": "2.1",
+  "generated_at": "2026-10-26T20:21:58+08:00",
+  "title": "一起整理一次读书分享",
+  "track": "教程清单",
+  "goal": "让内容目标、视觉表达与微信兼容约束保持一致",
+  "design_read": {
+    "article_type": "教程清单",
+    "audience": "根据资料判断并记录",
+    "action": "读完后的唯一主要动作",
+    "emotion": "由内容冲突决定",
+    "visual_family": "由核心母题决定，不继承旧示例",
+    "wechat_constraint": "inline CSS / static fallback / system fonts / mobile width"
+  },
+  "legacy_visual_policy": "greenfield-do-not-reference",
+  "brand_constraints": [],
+  "wechat_constraints": [
+    "inline CSS",
+    "no script",
+    "static fallback",
+    "system fonts",
+    "mobile width"
+  ],
+  "directions": [
+    {
+      "id": "clarity",
+      "name": "信息清晰型",
+      "keywords": [
+        "清楚",
+        "可信",
+        "低干扰"
+      ],
+      "layout_strategy": "证据式单列：结论先行、解释图、行动清单",
+      "component_strategy": [
+        "evidence-heading",
+        "annotated-diagram",
+        "action-checklist"
+      ],
+      "image_strategy": "原创解释图承担关系说明，不使用装饰图库",
+      "spacing": "comfortable",
+      "decoration": "low",
+      "motion": "none",
+      "controls": {
+        "design_variance": 4,
+        "motion_intensity": 1,
+        "visual_density": 5
+      },
+      "palette": [
+        "#304B5B",
+        "#D17A52",
+        "#EEF3F4"
+      ],
+      "title_structure": [
+        "eyebrow",
+        "main-title",
+        "one-sentence-promise"
+      ],
+      "visual_concept": "从《一起整理一次读书分享》的核心因果关系提炼单一母题；去掉文字后仍能辨认主题"
+    },
+    {
+      "id": "brand",
+      "name": "品牌专业型",
+      "keywords": [
+        "一致",
+        "权威",
+        "系统"
+      ],
+      "layout_strategy": "品牌声明首屏、证据带、人物/产品锚点、签名收束",
+      "component_strategy": [
+        "brand-statement",
+        "evidence-band",
+        "signature-close"
+      ],
+      "image_strategy": "真实品牌资产或定向生成主视觉，强调统一裁切和光线",
+      "spacing": "balanced",
+      "decoration": "medium",
+      "motion": "subtle",
+      "controls": {
+        "design_variance": 6,
+        "motion_intensity": 2,
+        "visual_density": 6
+      },
+      "palette": [
+        "#D17A52",
+        "#EEF3F4",
+        "#304B5B"
+      ],
+      "title_structure": [
+        "eyebrow",
+        "main-title",
+        "one-sentence-promise"
+      ],
+      "visual_concept": "从《一起整理一次读书分享》的核心因果关系提炼单一母题；去掉文字后仍能辨认主题"
+    },
+    {
+      "id": "visual",
+      "name": "视觉传播型",
+      "keywords": [
+        "记忆点",
+        "张力",
+        "分享"
+      ],
+      "layout_strategy": "海报首屏、编辑分栏、全幅停顿、强对照、海报收束",
+      "component_strategy": [
+        "poster-hero",
+        "editorial-spread",
+        "contrast-strip"
+      ],
+      "image_strategy": "以一个原创视觉母题贯穿主图、SVG、GIF与章节动作",
+      "spacing": "dramatic",
+      "decoration": "controlled-high",
+      "motion": "one semantic GIF with static fallback",
+      "controls": {
+        "design_variance": 8,
+        "motion_intensity": 4,
+        "visual_density": 5
+      },
+      "palette": [
+        "#EEF3F4",
+        "#304B5B",
+        "#D17A52"
+      ],
+      "title_structure": [
+        "visual-hook",
+        "main-title",
+        "short-subtitle"
+      ],
+      "visual_concept": "从《一起整理一次读书分享》的核心因果关系提炼单一母题；去掉文字后仍能辨认主题"
+    }
+  ],
+  "concept": "轻量清楚的行动手册",
+  "palette": [
+    "#304B5B",
+    "#D17A52",
+    "#EEF3F4"
+  ],
+  "template_keywords": [
+    "教程清单",
+    "轻量清楚的行动手册",
+    "公众号封面"
+  ],
+  "asset_direction": "AI原创优先；实景需求使用合规图库；画面不要生成文字，标题在可画或Figma中后置。",
+  "assets": [
+    {
+      "id": "cover-main",
+      "role": "cover",
+      "canvas": {
+        "width": 900,
+        "height": 383
+      },
+      "format": "PNG/JPG",
+      "composition": "宽幅主视觉，主体偏一侧，另一侧保留标题区",
+      "text_content": "一起整理一次读书分享",
+      "text_safe_area": "中央70%，距离四边至少8%",
+      "subject_safe_area": "缩略裁切后主体仍完整",
+      "prompt": "为《一起整理一次读书分享》创作轻量清楚的行动手册视觉，教程清单编辑设计，使用#304B5B、#D17A52、#EEF3F4，画面不要生成文字，保留标题安全区，原创且不模仿具体艺术家，2.35:1宽幅封面",
+      "palette": [
+        "#304B5B",
+        "#D17A52",
+        "#EEF3F4"
+      ],
+      "filename": "cover-main.jpg"
+    },
+    {
+      "id": "guide-wide",
+      "role": "inline",
+      "canvas": {
+        "width": 900,
+        "height": 500
+      },
+      "format": "PNG/JPG",
+      "composition": "横向叙事或概念解释画面，视觉焦点单一",
+      "text_content": "",
+      "text_safe_area": "四周保留8%呼吸区",
+      "subject_safe_area": "中心60%",
+      "prompt": "为《一起整理一次读书分享》创作轻量清楚的行动手册视觉，教程清单编辑设计，使用#304B5B、#D17A52、#EEF3F4，画面不要生成文字，保留标题安全区，原创且不模仿具体艺术家，正文横图，无文字",
+      "palette": [
+        "#304B5B",
+        "#D17A52",
+        "#EEF3F4"
+      ],
+      "filename": "guide-wide.jpg"
+    },
+    {
+      "id": "cover-square",
+      "role": "cover-crop",
+      "canvas": {
+        "width": 900,
+        "height": 900
+      },
+      "format": "PNG/JPG",
+      "composition": "方形主体居中，缩小到200px仍清楚",
+      "text_content": "",
+      "text_safe_area": "中心70%",
+      "subject_safe_area": "中心60%",
+      "prompt": "为《一起整理一次读书分享》创作轻量清楚的行动手册视觉，教程清单编辑设计，使用#304B5B、#D17A52、#EEF3F4，画面不要生成文字，保留标题安全区，原创且不模仿具体艺术家，方形裁切版本，无文字",
+      "palette": [
+        "#304B5B",
+        "#D17A52",
+        "#EEF3F4"
+      ],
+      "filename": "cover-square.jpg"
+    }
+  ]
+}

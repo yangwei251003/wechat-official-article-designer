@@ -1,0 +1,2 @@
+asset_id,source_platform,source_url,creator,accessed_at,license,license_version,commercial_use,attribution_required,modification_allowed,redistribution_allowed,library_storage_allowed,ai_training_allowed,expires_at,sha256,usage,evidence_path,status
+example-logo,user-provided,,user,2026-07-24,User-confirmed rights,,true,false,true,false,true,unknown,,replace-with-real-hash,brand header,licenses/example-logo.txt,verified

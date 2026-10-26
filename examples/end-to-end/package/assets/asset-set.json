@@ -1,0 +1,76 @@
+{
+  "schema_version": "2.0",
+  "created_at": "2026-07-24T22:02:26+08:00",
+  "topic": "小团队用户研究：从假设到观察，再用实验捕捉真实信号",
+  "motif": "signal-lens",
+  "palette": [
+    "#101522",
+    "#FF5B45",
+    "#C8FF4A"
+  ],
+  "art_direction": {
+    "concept": "signal-lens",
+    "original": true,
+    "text_in_image": false,
+    "wechat_fallbacks": true
+  },
+  "editable_svg": "motion-source.svg",
+  "wechat_gif": "motion-wechat.gif",
+  "static_poster": "motion-poster.png",
+  "hero": "hero-wechat.png",
+  "cover": "cover-wechat.png",
+  "texture": "texture-wechat.png",
+  "component": "component.html",
+  "assets": [
+    {
+      "id": "motion-source",
+      "role": "source",
+      "local_path": "motion-source.svg",
+      "provider": "original",
+      "license": "Original asset",
+      "wechat_ready": false,
+      "fallback": "motion-wechat.gif"
+    },
+    {
+      "id": "hero-wechat",
+      "role": "hero",
+      "local_path": "hero-wechat.png",
+      "provider": "original",
+      "license": "Original asset",
+      "wechat_ready": true
+    },
+    {
+      "id": "cover-wechat",
+      "role": "cover",
+      "local_path": "cover-wechat.png",
+      "provider": "original",
+      "license": "Original asset",
+      "wechat_ready": true
+    },
+    {
+      "id": "motion-wechat",
+      "role": "ornament",
+      "local_path": "motion-wechat.gif",
+      "provider": "original",
+      "license": "Original asset",
+      "wechat_ready": true,
+      "fallback": "motion-poster.png"
+    },
+    {
+      "id": "texture-wechat",
+      "role": "texture",
+      "local_path": "texture-wechat.png",
+      "provider": "original",
+      "license": "Original asset",
+      "wechat_ready": true
+    },
+    {
+      "id": "component",
+      "role": "component",
+      "local_path": "component.html",
+      "provider": "original",
+      "license": "Original asset",
+      "wechat_ready": true
+    }
+  ]
+}

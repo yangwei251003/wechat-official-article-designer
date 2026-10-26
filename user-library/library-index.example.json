@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-07-24T00:00:00+08:00",
+  "root": ".",
+  "items": [
+    {
+      "id": "example-logo",
+      "path": "brand-kits/example-logo.png",
+      "title": "示例品牌Logo",
+      "tags": ["logo", "brand"],
+      "ocr_text": "",
+      "people": [],
+      "products": [],
+      "places": [],
+      "dominant_color": "#315F58",
+      "ratio": "1:1",
+      "resolution": "900x900",
+      "style": "minimal",
+      "mood": "professional",
+      "topics": ["brand"],
+      "brand": "Example",
+      "origin": "user-library",
+      "origin_priority": 1,
+      "source": "user-provided",
+      "creator": "user",
+      "license": "User-confirmed rights",
+      "license_status": "verified",
+      "commercial_use": true,
+      "attribution_required": false,
+      "modification_allowed": true,
+      "redistribution_allowed": false,
+      "expires_at": "",
+      "sha256": "replace-with-real-hash",
+      "use_count": 0,
+      "last_used_at": ""
+    }
+  ]
+}

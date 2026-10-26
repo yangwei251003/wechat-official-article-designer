@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-07-25T00:02:00+08:00",
+  "topic": "小团队用户研究：观察、实验与真实信号",
+  "palette": [
+    "#101522",
+    "#FF5B45",
+    "#C8FF4A"
+  ],
+  "selection_order": [
+    "user-specified",
+    "user-library",
+    "licensed-external",
+    "imagegen",
+    "programmatic"
+  ],
+  "elements": [
+    {
+      "type": "emoji",
+      "values": [
+        "🔎",
+        "🧪",
+        "🧭"
+      ],
+      "delivery": "native-unicode-in-html",
+      "upload_required": false,
+      "rules": [
+        "全文默认不超过3种",
+        "不承载唯一信息",
+        "正式/法律/医疗主题默认不用"
+      ]
+    },
+    {
+      "type": "icon",
+      "source": "Iconify lucide/tabler/ph",
+      "external_query": [
+        "search",
+        "arrow-right",
+        "sparkles"
+      ],
+      "delivery": "sanitize SVG then rasterize to PNG",
+      "upload_required": true,
+      "rules": [
+        "一个文章只用一个图标家族",
+        "SVG源不直接放公众号正文",
+        "记录许可证和署名"
+      ]
+    },
+    {
+      "type": "line-frame",
+      "source": "inline HTML/CSS",
+      "delivery": "wechat-safe HTML component",
+      "upload_required": false,
+      "rules": [
+        "只在语义分组或转折出现",
+        "不连续重复同一种边线组件"
+      ]
+    },
+    {
+      "type": "illustration",
+      "source": "licensed external or imagegen",
+      "delivery": "PNG/JPG, optionally GIF with static fallback",
+      "upload_required": true,
+      "rules": [
+        "每张图必须承担证据、解释、情绪或路径之一",
+        "无合适外部素材时调用image_gen"
+      ]
+    },
+    {
+      "type": "background",
+      "source": "asset_factory or imagegen",
+      "delivery": "low-contrast PNG texture",
+      "upload_required": true,
+      "rules": [
+        "不能降低正文对比度",
+        "不能把背景图作为唯一信息"
+      ]
+    }
+  ],
+  "imagegen_tasks": [
+    {
+      "id": "illustration-main",
+      "use_case": "illustration-story",
+      "target": "公众号正文横图，900×500，导出PNG/JPG后自动上传",
+      "prompt": "主题：小团队用户研究：观察、实验与真实信号。色彩关系：深色/中性色基底 #101522，主色 #FF5B45，强调色 #C8FF4A。不生成文字、Logo、水印、虚构数据或模仿具体艺术家；保留安全留白；画面只服务文章语义。创作一张具有单一叙事焦点的编辑插画，主体动作明确，材质和光线真实克制。"
+    },
+    {
+      "id": "background-texture",
+      "use_case": "stylized-concept",
+      "target": "微信公众号背景纹理，1080×420，低对比度PNG",
+      "prompt": "主题：小团队用户研究：观察、实验与真实信号。色彩关系：深色/中性色基底 #101522，主色 #FF5B45，强调色 #C8FF4A。不生成文字、Logo、水印、虚构数据或模仿具体艺术家；保留安全留白；画面只服务文章语义。创作稀疏、低对比、可裁切的背景纹理，不含人物、文字或醒目主体。"
+    },
+    {
+      "id": "emoji-sticker-sheet",
+      "use_case": "stylized-concept",
+      "target": "如原生Emoji不适合品牌时，生成一张小型装饰贴纸PNG，不承担关键信息",
+      "prompt": "主题：小团队用户研究：观察、实验与真实信号。色彩关系：深色/中性色基底 #101522，主色 #FF5B45，强调色 #C8FF4A。不生成文字、Logo、水印、虚构数据或模仿具体艺术家；保留安全留白；画面只服务文章语义。创作一组统一笔触的小型符号贴纸，单色或双色，留足透明背景移除空间。"
+    }
+  ]
+}
